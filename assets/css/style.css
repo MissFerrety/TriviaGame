@@ -1,0 +1,78 @@
+/* ==================================================================== 
+/* Twinkling Stars background derived from
+/* https://codepen.io/WebSonick/pen/vjmgu
+/* ==================================================================== */
+
+*{
+}
+html{
+	height: 100%;
+}
+body{
+	text-align: center;
+	background: url('../images/vintage-rising-sun.jpg') fixed center no-repeat;
+	background-size: cover;
+	color: white;
+	text-shadow: 2px 1px #333, -1px -1px #999;
+}
+img{
+	max-width: 100%;
+}
+
+.noshow{
+	display: none;
+}
+.vcenter{
+	display: flex;
+	align-items: center;
+}
+.translate{
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+.site-header{
+	padding: 20px 0;
+}
+
+.page-title{
+	margin: 0;
+}
+
+.section{
+	text-align: center;
+}
+.section-title{
+	margin-bottom: 2em;
+}
+
+#options{
+	list-style-type: upper-alpha;
+}
+
+
+@media (min-width: 768px){
+	.row-sm-eq-height {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+@media (min-width: 992px){
+	.row-md-eq-height {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+@media (min-width: 1200px){
+	.row-lg-eq-height {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
