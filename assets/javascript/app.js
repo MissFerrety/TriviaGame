@@ -10,10 +10,10 @@ $(function(){
 	var resultCorrect = resultWrong = resultSkipped = 0;
 
 	/* Create class for quiz creation & checking */
-	var Question = function(q,a,x1,x2,x3){
+	var Question = function(q,a,x){
 		this.question = q;
 		this.answer = a;
-		this.wrong = [x1,x2,x3];
+		this.wrong = x;
 	}
 	Question.prototype.build = function(){
 		// Clear list and add click class checker
@@ -137,73 +137,93 @@ $(function(){
 		new Question(
 			'What is Japan\'s largest island?',
 			'Honshu',
-			'Kyuushu',
-			'Shikoku',
-			'Hokkaido'
+			[
+				'Kyuushu',
+				'Shikoku',
+				'Hokkaido'
+			]
 		),
 		new Question(
 			'What is the approximate population of Japan?',
 			'127 million',
-			'200 million',
-			'163 million',
-			'92 million'
+			[
+				'200 million',
+				'163 million',
+				'92 million'
+			]
 		),
 		new Question(
 			'The imperial seal of Japan is which flower?',
 			'chrysanthemum',
-			'daffodil',
-			'rose',
-			'cherry blossom'
+			[
+				'daffodil',
+				'rose',
+				'cherry blossom'
+			]
 		),
 		new Question(
 			'What is the drinking age in Japan?',
 			'20',
-			'18',
-			'16',
-			'22'
+			[
+				'18',
+				'16',
+				'22'
+			]
 		),
 		new Question(
 			'During which holiday would you see carp flags flown?',
 			'こどもの日 (Children\'s Day)',
-			'文化の日 (Culture Day)',
-			'成人の日 (Coming of Age Day)',
-			'元日 (New Year\'s)'
+			[
+				'文化の日 (Culture Day)',
+				'成人の日 (Coming of Age Day)',
+				'元日 (New Year\'s)'
+			]
 		),
 		new Question(
 			'Which of the following is a modern Japanese Christmas tradition?',
 			'Fried chicken dinner',
-			'They don\'t celebrate Christmas',
-			'??',
-			'??'
+			[
+				'Japanese people don\'t celebrate Christmas',
+				'People write wishes on rice paper and burn them',
+				'Santa Claus lookalike contests'
+			]
 		),
 		new Question(
 			'What is the approximate ratio of vending machines to people in Japan?',
 			'1 to 25',
-			'1 to 1000',
-			'1 to 10',
-			'1 to 300'
-		),/*
-		new Question(
-			'What is Japan\'s largest island?',
-			'Honshu',
-			'Kyuushu',
-			'Shikoku',
-			'Hokkaido'
+			[
+				'1 to 1000',
+				'1 to 10',
+				'1 to 300'
+			]
 		),
 		new Question(
-			'What is Japan\'s largest island?',
-			'Honshu',
-			'Kyuushu',
-			'Shikoku',
-			'Hokkaido'
+			'What is the maximum operating speed of the Shinkansen (新幹線), also known as the Japanese Bullet Train?',
+			'200mph',
+			[
+				'120mph',
+				'86mph',
+				'275mph'
+			]
 		),
 		new Question(
-			'What is Japan\'s largest island?',
-			'Honshu',
-			'Kyuushu',
-			'Shikoku',
-			'Hokkaido'
-		),*/
+			'What is the most popular sport in Japan?',
+			'Baseball',
+			[
+				'Sumo wrestling',
+				'Golf',
+				'Boxing'
+			]
+		),
+		new Question(
+			'Which of the following cities has NOT hosted an Olympic Games?',
+			'Osaka',
+			[
+				'Tokyo',
+				'Sapporo',
+				'Nagano'
+			]
+		),
 	];
 
 	$('body').on('click', '.answer', function(){

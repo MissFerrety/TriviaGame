@@ -20,7 +20,7 @@
 	<section id="startgame" class="section container bookend">
 		<h2>Welcome!</h2>
 		<div class="intro">
-			<p>This quiz will test your knowledge of Japanese culture!</p>
+			<p>This quiz will test your knowledge of Japanese culture. Try your best to answer each question. Don't worry about getting it wrong &mdash; we'll correct you. Try again until you can get them all right. Don't bother memorizing the order of the answers &mdash; it's been randomized. The point here is to learn!</p>
 		</div>
 		<button id="start" class="btn-restart">Start Game</button>
 	</section>
