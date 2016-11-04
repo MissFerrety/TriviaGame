@@ -101,7 +101,11 @@ p:last-child{
 .timer div{
 	flex: 1 1 auto;
 }
-
+.secs{
+	display: block;
+	margin-top: 20px;
+	font-size: 1.5em;
+}
 #time-left{
 }
 

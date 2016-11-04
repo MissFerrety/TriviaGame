@@ -2,7 +2,7 @@ $(function(){
 
 	/* Instantiate global vars */
 	var secsToNext = 3;
-	var secsToAnswer = 10;
+	var secsToAnswer = 15;
 	var currentQobj = null;
 	var currentQid = 0;
 	var qTimer, nextTimer;
@@ -20,6 +20,7 @@ $(function(){
 		$('#options').addClass('open').html('');
 		// Add question to the board
 		$('#question').html(this.question);
+		$('#qnum').html(currentQid + 1);
 
 		// Wrap the answers in HTML
 		var options = ['<li>'+this.answer+'</li>'];
@@ -122,6 +123,8 @@ $(function(){
 		currentQid = 0;
 		currentQobj = null;
 		resultCorrect = resultWrong = resultSkipped = 0;
+
+		$('#qtotal').html(quiz.length);
 
 		// Hide the start or end screen & display quiz
 		$('#'+btnid).parents('.bookend').fadeOut(500, function(){

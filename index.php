@@ -25,7 +25,10 @@
 		<button id="start" class="btn-restart">Start Game</button>
 	</section>
 	<section id="quiz" class="section container noshow">
-		<h2 class="section-title" id="question">Question</h2>
+		<div class="section-title">
+			<h2 id="question">Question</h2>
+			<h3 class="question-count">Question <span id="qnum">0</span> of <span id="qtotal">0</span></h3>
+		</div>
 		<div class="row row-sm-eq-height">
 			<div class="col-sm-4 col-sm-push-8">
 				<div class="timer vcenter">
