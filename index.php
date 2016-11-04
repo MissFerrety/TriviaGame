@@ -17,14 +17,44 @@
 			<h2 class="translate">Japanese Trivia Game</h2>
 		</div>
 	</header>
-	<section id="select-screen" class="section container">
+	<section id="startgame" class="section container bookend">
+		<h2>Welcome!</h2>
+		<div class="intro">
+			<p>This quiz will test your knowledge of Japanese culture!</p>
+		</div>
+		<button id="start" class="btn-restart">Start Game</button>
+	</section>
+	<section id="quiz" class="section container noshow">
 		<h2 class="section-title" id="question">Question</h2>
-		<ol id="options">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ol>
+		<div class="row row-sm-eq-height">
+			<div class="col-sm-4 col-sm-push-8">
+				<div class="timer vcenter">
+					<div id="question-timer" class="">
+						<h4>Time Left<span class="secs"><span id="q-time-left"></span> secs</span></h4>
+					</div>
+					<div id="next-timer" class="noshow">
+						<h4>Next Question in<span class="secs"><span id="n-time-left"></span> secs</span></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 col-sm-pull-4">
+				<div class="answers">
+					<ol id="options">
+					</ol>
+				</div>
+			</div>
+	</section>
+	<section id="endscreen" class="section container noshow bookend">
+		<h2>Game over!</h2>
+		<h3>Here are your results</h3>
+		<div class="results">
+			<ul>
+				<li class="result correct">Questions answered correctly: <span id="num-correct"></span></li>
+				<li class="result wrong">Questions answered incorrectly: <span id="num-wrong"></span></li>
+				<li class="result">Questions skipped: <span id="num-skipped"></span></li>
+			</ul>
+		</div>
+		<button id="restart" class="btn-restart">Restart?</button>
 	</section>
 
 	<!-- Call jQuery and game JS -->

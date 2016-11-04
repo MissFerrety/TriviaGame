@@ -18,6 +18,9 @@ body{
 img{
 	max-width: 100%;
 }
+p:last-child{
+	margin-bottom: 0;
+}
 
 .noshow{
 	display: none;
@@ -30,6 +33,7 @@ img{
 	font-weight: normal;
 	font-style: italic;
 }
+
 
 
 .site-header{
@@ -51,6 +55,95 @@ img{
 	list-style-type: upper-alpha;
 }
 
+
+
+
+.intro, .answers, .timer, .results{
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	align-content: center;
+}
+.intro, .answers, .results{
+	padding: 30px;	
+}
+
+.answers{
+}
+.answers ol{
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+
+.answer{
+	background: gray;
+	border: 1px solid white;
+	line-height: 40px;
+	border-radius: 20px;
+	transition: background 0.3s;
+	cursor: pointer;
+	font-size: 1.25em;
+}
+.answer:not(:last-child){
+	margin-bottom: 15px;
+}
+.answer.correct{
+	background: green;
+}
+.answer.wrong{
+	background: red;
+}
+
+
+
+
+.timer{
+}
+.timer div{
+	flex: 1 1 auto;
+}
+
+#time-left{
+}
+
+
+.results{
+}
+.results ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.result{
+	font-size: 1.5em;
+}
+.result.correct{
+	color: limegreen;
+	text-shadow: 2px 1px black, -1px -1px green;
+}
+.result.wrong{
+	color: red;
+	text-shadow: 2px 1px black, -1px -1px maroon;
+}
+
+
+
+.btn-restart{
+	display: block;
+	cursor: pointer;
+	width: 200px;
+	line-height: 50px;
+	border-radius: 25px;
+	margin: 30px auto;
+	font-size: 1.25em;
+	background: white;
+	border: 1px solid black;
+	color: black;
+	text-shadow: none;
+	font-weight: bold;
+}
+.btn-restart:hover{
+	background: gray;
+}
 
 @media (min-width: 768px){
 	.row-sm-eq-height {
